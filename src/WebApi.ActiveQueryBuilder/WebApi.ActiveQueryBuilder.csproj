@@ -24,7 +24,7 @@ limitations under the License.
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3FB4AA1C-9CD0-49DE-8366-5F881E2D3731}</ProjectGuid>
+    <ProjectGuid>{CA024373-104D-48F5-A397-59F9724EF5A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Swagger Library</RootNamespace>

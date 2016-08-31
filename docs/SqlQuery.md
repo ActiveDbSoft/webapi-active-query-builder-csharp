@@ -1,4 +1,7 @@
 # WebApi.ActiveQueryBuilder.Model.SqlQuery
+
+Information about SQL query and it&#39;s context.
+
 ## Properties
 
 Name | Type | Description | Notes
