@@ -84,3 +84,6 @@ Class | Method | HTTP request | Description
  - [Model.Transform](docs/Transform.md)
  - [Model.TransformResult](docs/TransformResult.md)
 
+
+## Source code
+Full source code of all clients for Active Query Builder Web API is available on GitHub. Get the source code of javascript here: [https://github.com/ActiveDbSoft/webapi-active-query-builder-csharp](https://github.com/ActiveDbSoft/webapi-active-query-builder-csharp)

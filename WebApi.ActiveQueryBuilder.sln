@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.ActiveQueryBuilder", "src\WebApi.ActiveQueryBuilder\WebApi.ActiveQueryBuilder.csproj", "{CA024373-104D-48F5-A397-59F9724EF5A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.ActiveQueryBuilder", "src\WebApi.ActiveQueryBuilder\WebApi.ActiveQueryBuilder.csproj", "{B4AD5511-5A77-46C9-93B5-D1A7F8E8F4BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.ActiveQueryBuilder.Test", "src\WebApi.ActiveQueryBuilder.Test\WebApi.ActiveQueryBuilder.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Debug|Any CPU = Debug|Any CPU
 Release|Any CPU = Release|Any CPU
 EndGlobalSection
 GlobalSection(ProjectConfigurationPlatforms) = postSolution
-{CA024373-104D-48F5-A397-59F9724EF5A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-{CA024373-104D-48F5-A397-59F9724EF5A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-{CA024373-104D-48F5-A397-59F9724EF5A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-{CA024373-104D-48F5-A397-59F9724EF5A3}.Release|Any CPU.Build.0 = Release|Any CPU
+{B4AD5511-5A77-46C9-93B5-D1A7F8E8F4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{B4AD5511-5A77-46C9-93B5-D1A7F8E8F4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{B4AD5511-5A77-46C9-93B5-D1A7F8E8F4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{B4AD5511-5A77-46C9-93B5-D1A7F8E8F4BE}.Release|Any CPU.Build.0 = Release|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
