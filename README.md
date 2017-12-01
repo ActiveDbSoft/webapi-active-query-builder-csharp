@@ -23,17 +23,18 @@ Include the DLL in the C# project, and use the namespaces:
 ```csharp
 using WebApi.ActiveQueryBuilder.Api;
 using WebApi.ActiveQueryBuilder.Client;
-using Model;
+using WebApi.ActiveQueryBuilder.Model;
 ```
 
 ## Getting Started
 
 ```csharp
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using WebApi.ActiveQueryBuilder.Api;
 using WebApi.ActiveQueryBuilder.Client;
-using Model;
+using WebApi.ActiveQueryBuilder.Model;
 
 namespace Example
 {
@@ -41,19 +42,50 @@ namespace Example
     {
         public void main()
         {
-            
-            var apiInstance = new ActiveQueryBuilderApi();
-            var query = new SqlQuery(); // SqlQuery | Information about SQL query and it's context.
+            string sql = "Select customer_id, first_name From customer";
+            string metadataGuid = "b3207f4f-b1f4-4dc2-979b-7724ed2d0221";
 
-            try
+            var apiInstance = new ActiveQueryBuilderApi();
+            
+            var query = new SqlQuery() // SqlQuery | Information about SQL query and it's context.
             {
-                List<QueryColumn> result = apiInstance.GetQueryColumnsPost(query);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
+              Guid = metadataGuid,
+              Text = sql
+            };
+            
+            List<QueryColumn> columns = apiInstance.GetQueryColumnsPost(query);
+            Debug.WriteLine("API called successfully. Returned columns: " + columns.Count);
+            
+            var transform = new Transform
             {
-                Debug.Print("Exception when calling ActiveQueryBuilderApi.GetQueryColumnsPost: " + e.Message );
-            }
+                Guid = metadataGuid,
+                Sql = sql
+            };
+
+            var filter = new ConditionGroup();
+
+            var conditionGroup = new ConditionGroup();
+
+            var condition = new Condition
+            {
+                Field = "customer_id",
+                ConditionOperator = Condition.ConditionOperatorEnum.Greater,
+                Values = new List<string> { "10" }
+            };
+            
+            conditionGroup.Conditions = new List<Condition> { condition };
+
+            filter.ConditionGroups = new List<ConditionGroup> { conditionGroup };
+
+            var page = new Pagination { Skip = 2, Take = 3 };
+            var order = new Sorting { Field = "customer_id", Order = Sorting.OrderEnum.Desc };            
+
+            transform.Filter = filter;
+            transform.Pagination = page;
+            transform.Sortings = new List<Sorting> { order };
+
+            TransformResult result = apiInstance.TransformSQLPost(transform);
+            Debug.WriteLine("API called successfully. Returned result: " + result.Sql);
         }
     }
 }
