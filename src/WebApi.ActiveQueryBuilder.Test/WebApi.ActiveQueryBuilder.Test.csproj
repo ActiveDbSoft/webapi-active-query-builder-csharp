@@ -86,7 +86,7 @@ limitations under the License.
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\WebApi.ActiveQueryBuilder\WebApi.ActiveQueryBuilder.csproj">
-          <Project>{B2125E89-3758-4D85-963E-11A06A931DBC}</Project>
+          <Project>{B465C477-4534-494B-A44D-FB548638D552}</Project>
           <Name>WebApi.ActiveQueryBuilder</Name>
       </ProjectReference>
   </ItemGroup>

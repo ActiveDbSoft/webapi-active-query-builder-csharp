@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>WebApi.ActiveQueryBuilder</id>
+	<title>WebApi.ActiveQueryBuilder</title>
+        <version>1.1.8</version>
+        <authors>ActiveDBSoft</authors>
+	<owners>Active Database Software LLC.</owners>                         
+	<projectUrl>https://webapi.activequerybuilder.com</projectUrl>
+	<iconUrl>http://www.activequerybuilder.com/i/ico32.gif</iconUrl>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<description>Transforms the given SQL query according to the commands provided in this request. You can add constraints, hide some of the resultset columns, chang sorting or limit rows of resultset. All transformations are performed according to the SQL syntax and database schema provided through the registered account at https://webapi.activequerybuilder.com/ identified by the given unique identifier. All transformations can only lead to reorganization or limitation of the resultset data. This means that it's impossible to get transformed SQL that reveals any other data than the data retutned by original query.</description>
+	<summary>Active Query Builder Web API lets create, analyze and modify SQL queries for different database servers using RESTful HTTP requests</summary>
+	<releaseNotes></releaseNotes>
+	<copyright>Copyright 2007-2016 ActiveDBSoft. All rights reserved.</copyright>
+	<tags></tags>
+	<dependencies>
+	  <dependency id="Newtonsoft.JSON" version="8.0.2" />
+	  <dependency id="RestSharp" version="105.1.0" />
+	</dependencies>
+    </metadata>
+    <files>
+        <file src=".\bin\*.dll" target="lib\net" />
+	<file src=".\bin\*.xml" target="lib\net" />
+    </files>
+</package>
